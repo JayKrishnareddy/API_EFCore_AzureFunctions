@@ -11,7 +11,7 @@ namespace API_EFCore_AzureFunctions
    {
         public override void Configure(IFunctionsHostBuilder builder)
         {
-            string connectionString = "Data Source=N-20RJPF2CFK06\\SQLEXPRESS;Integrated Security=true;Database=AzureAPI";
+            string connectionString = "Data Source=DESKTOP-UUBJ14C\\SQLEXPRESS;Integrated Security=true;Database=Sample";
             builder.Services.AddDbContext<AppDbContext>(
                 options => SqlServerDbContextOptionsExtensions.UseSqlServer(options, connectionString));
         }
