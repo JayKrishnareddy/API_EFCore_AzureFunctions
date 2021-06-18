@@ -9,6 +9,6 @@ namespace API_EFCore_AzureFunctions.Models
         {
 
         }
-        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Employee> Employee { get; set; }
     }
 }
