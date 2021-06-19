@@ -25,26 +25,6 @@ namespace API_EFCore_AzureFunctions
         }
         #endregion
         
-        [FunctionName("Get")]
-        public async Task<IActionResult> Get(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
-            ILogger log)
-        {
-            log.LogInformation("C# HTTP trigger function processed a request.");
-
-            string name = req.Query["name"];
-
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
-
-            string responseMessage = string.IsNullOrEmpty(name)
-                ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
-                : $"Hello, {name}. This HTTP triggered function executed successfully.";
-
-            return new OkObjectResult(responseMessage);
-        }   
-        
         #region Function Get Employees
         /// <summary>
         /// Get List of Employees
@@ -55,7 +35,7 @@ namespace API_EFCore_AzureFunctions
         [FunctionName("GetAllEmployees")]
         public async Task<IActionResult> GetAllEmployees(
         [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)]
-          HttpRequest req, ILogger log)
+          HttpRequest req, ILogger log) 
         {
             try
             {
@@ -78,7 +58,7 @@ namespace API_EFCore_AzureFunctions
         /// <param name="log"></param>
         /// <param name="Id"></param>
         /// <returns></returns>
-        [FunctionName("GetbyId")]
+        [FunctionName("GetEmployeebyId")]
         public async Task<IActionResult> GetEmployeebyId(
         [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "{Id}")]
           HttpRequest req, ILogger log, int Id)
