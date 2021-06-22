@@ -1,5 +1,7 @@
 ## Building Serverless API's Using Azure Functions And C# 
 
+![picture alt](https://github.com/JayKrishnareddy/API_EFCore_AzureFunctions/blob/master/B12.png "Title is optional")
+
 ### Table of Contents
 1. Setting up the Azure Function
 2. Database Schema and Entity Model
