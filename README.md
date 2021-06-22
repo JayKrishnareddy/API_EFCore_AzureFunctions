@@ -1,14 +1,14 @@
 ## Building Serverless API's Using Azure Functions And C# 
 
 ### Table of Contents
-Setting up the Azure Function
-Database Schema and Entity Model
-Setting up the Connection with SQL Database by using EF Core
-Initialize Dependency Injection
-Injecting the DbContext into a function
-Implementing Functions
-Tesing the APIs using Postman 
-Conclusion
+1. Setting up the Azure Function
+2. Database Schema and Entity Model
+3. Setting up the Connection with SQL Database by using EF Core
+4. Initialize Dependency Injection
+5. Injecting the DbContext into a function
+6. Implementing Functions
+7. Tesing the APIs using Postman 
+8. Conclusion
 
 
 If you want to learn more about this Article 👇🏻
